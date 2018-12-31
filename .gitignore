@@ -1,0 +1,10 @@
+thirdparty
+Debug
+Release
+*.exe
+*.exp
+*.ilk
+*.lib
+*.pdb
+*.vs
+*.user
