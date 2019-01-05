@@ -1,6 +1,11 @@
 #include <iostream>
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
+#include <Navi/NaviFileSystem.h>
+
+#if defined(_WIN32) || defined(WIN32)
+#define ENGINE_APP_TO_ROOT ".."
+#endif
 
 int main()
 {
@@ -12,8 +17,7 @@ int main()
 
 	GLFWwindow *window = glfwCreateWindow(640, 480, "Navi", NULL, NULL);
 	if (!window)
-	{
-		fprintf(stderr, "ERROR: could not open window with GLFW3\n");
+	{ fprintf(stderr, "ERROR: could not open window with GLFW3\n");
 		glfwTerminate();
 		return 1;
 	}
@@ -50,13 +54,18 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 
-	const char* vertex_shader = 
-		"#version 410\n"
-		"in vec3 vp;"
-		"void main () {"
-		"	gl_Position = vec4 (vp, 1.0);" 
-		"}";
+	Navi::FileSystem* fileSystem = Navi::FileSystem::get(ENGINE_APP_TO_ROOT);
+	std::string vsContents;
+	if (fileSystem->readFile(Navi::FileSystem::Category::SHADER, "vs1.vs", vsContents))
+	{
 
+	}
+	else
+	{
+
+	}
+
+	const char* vertex_shader = vsContents.c_str();
 	const char* fragment_shader =
 		"#version 410\n"
 		"out vec4 frag_colour;"

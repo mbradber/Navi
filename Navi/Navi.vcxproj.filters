@@ -13,13 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\thirdparty">
+      <UniqueIdentifier>{97e0ae4f-51ec-4f6c-899e-7721fca782a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thirdparty\gl3w">
+      <UniqueIdentifier>{bc6298dd-a1c5-460c-8ddc-f5a4a66019a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Navi">
+      <UniqueIdentifier>{c313b002-dcf1-40d7-be7d-53d1fdae21d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Navi\Windows">
+      <UniqueIdentifier>{3246ab40-56f1-42cb-bfc9-afad0ba4203a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\thirdparty\gl3w\src\gl3w.c">
+      <Filter>Source Files\thirdparty\gl3w</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\NaviFileSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Windows\NaviFileSystem_Windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\include\Navi\Windows\NaviFileSystem_Windows.h">
+      <Filter>Header Files\Navi\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Navi\NaviFileSystem.h">
+      <Filter>Header Files\Navi</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
