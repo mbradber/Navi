@@ -6,5 +6,5 @@ Release
 *.ilk
 *.lib
 *.pdb
-*.vs
 *.user
+.vs
