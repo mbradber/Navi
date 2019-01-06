@@ -54,24 +54,22 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 
-	Navi::FileSystem* fileSystem = Navi::FileSystem::get(ENGINE_APP_TO_ROOT);
+	Navi::FileSystem& fileSystem = Navi::FileSystem::get(ENGINE_APP_TO_ROOT);
+
 	std::string vsContents;
-	if (fileSystem->readFile(Navi::FileSystem::Category::SHADER, "vs1.vs", vsContents))
+	if (!fileSystem.readFile(Navi::FileSystem::Category::SHADER, "vs1.vs", vsContents))
 	{
 
 	}
-	else
+
+	std::string fsContents;
+	if (!fileSystem.readFile(Navi::FileSystem::Category::SHADER, "fs1.fs", fsContents))
 	{
 
 	}
 
 	const char* vertex_shader = vsContents.c_str();
-	const char* fragment_shader =
-		"#version 410\n"
-		"out vec4 frag_colour;"
-		"void main () {"
-		"	frag_colour = vec4 (0.5, 0.0, 0.5, 1.0);"
-		"}";
+	const char* fragment_shader = fsContents.c_str();
 
 	// compile shaders and link into a program
 	GLuint vs = glCreateShader(GL_VERTEX_SHADER);

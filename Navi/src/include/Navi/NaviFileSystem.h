@@ -21,10 +21,10 @@ public:
 	{
 	}
 
-	static FileSystem* get(const std::string& rootPath);
+	static FileSystem& get(const std::string& rootPath);
 
 	bool readFile(Category category, const std::string& filename, std::string& buffer) const;
-	virtual std::string getAppPath() const = 0;
+	std::string getAppPath() const;
 	std::string getRootPath() const;
 	std::string getPathSeparator() const;
 	std::string getCategoryPath(Category category) const;

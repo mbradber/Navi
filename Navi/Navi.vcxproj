@@ -145,7 +145,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\include\Navi\NaviFileSystem.h" />
-    <ClInclude Include="src\include\Navi\Windows\NaviFileSystem_Windows.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

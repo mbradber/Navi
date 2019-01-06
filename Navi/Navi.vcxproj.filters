@@ -41,9 +41,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\include\Navi\Windows\NaviFileSystem_Windows.h">
-      <Filter>Header Files\Navi\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="src\include\Navi\NaviFileSystem.h">
       <Filter>Header Files\Navi</Filter>
     </ClInclude>

@@ -5,6 +5,12 @@
 namespace Navi
 {
 
+FileSystem& FileSystem::get(const std::string& appToRootPath)
+{
+	static FileSystem fs(appToRootPath);
+	return fs;
+}
+
 std::string FileSystem::getRootPath() const
 {
 	return getAppPath() + mAppToRootPath + getPathSeparator();
