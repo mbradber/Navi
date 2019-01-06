@@ -39,9 +39,15 @@
     <ClCompile Include="src\Windows\NaviFileSystem_Windows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\NaviLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\include\Navi\NaviFileSystem.h">
+      <Filter>Header Files\Navi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Navi\NaviLog.h">
       <Filter>Header Files\Navi</Filter>
     </ClInclude>
   </ItemGroup>

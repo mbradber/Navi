@@ -141,10 +141,12 @@
     <ClCompile Include="..\thirdparty\gl3w\src\gl3w.c" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\NaviFileSystem.cpp" />
+    <ClCompile Include="src\NaviLog.cpp" />
     <ClCompile Include="src\Windows\NaviFileSystem_Windows.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\include\Navi\NaviFileSystem.h" />
+    <ClInclude Include="src\include\Navi\NaviLog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
