@@ -60,13 +60,13 @@ int main()
 	std::string vsContents;
 	if (!fileSystem.readFile(Navi::FileSystem::Category::SHADER, "vs1.vs", vsContents))
 	{
-		Navi::Log::get().logError("Failed to load vertex shader %s\n", "vs1.vs");
+		Navi::Log::get().log(Navi::Log::Category::Error, "Failed to load vertex shader %s\n", "vs1.vs");
 	}
 
 	std::string fsContents;
 	if (!fileSystem.readFile(Navi::FileSystem::Category::SHADER, "fs1.fs", fsContents))
 	{
-		Navi::Log::get().logError("Failed to load fragment shader %s\n", "fs1.fs");
+		Navi::Log::get().log(Navi::Log::Category::Error, "Failed to load fragment shader %s\n", "fs1.fs");
 	}
 
 	const char* vertex_shader = vsContents.c_str();
